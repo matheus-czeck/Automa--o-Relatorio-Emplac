@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+main{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: start;
+}
+.inp_info{
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    align-content: start;
+    max-width: 50vw;
+    justify-content: start;
+    margin-top: 30px;
+    background-color: #ccc;
+    padding: 5px;
+    border-radius:10px  ;
+    
+
+}
+p{
+    margin-bottom: 2.5px;
+
+
+}
+.input{
+    
+    width: 200px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction:column ;
+}
+.result{
+    margin-top: 50px;
+
+}
+#btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+#btn > .botao{
+    width: 100px;
+    margin-bottom: 30px;
+    margin-right: 5px;
+}
+
+ table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+#ass{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+@media print {
+    /* Esconde o elemento com a classe "inp_info" ao imprimir */
+    .inp_info {
+        display: none;
+    }
+
+    /* Define uma imagem de fundo para o corpo da página ao imprimir */
+    body::before {
+        content: url('/Automa--o-Relatorio-Emplac/img/decalquesDetranCerto.jpg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ajusta a largura conforme necessário */
+        height: 100%; /* Mantém a proporção da imagem */
+        z-index: -1; /* Certifica-se de que a imagem esteja atrás do conteúdo */
+        
+    }
+    #ass{
+        margin-top: 30px;
+        content: url('/Automa--o-Relatorio-Emplac/img/assinatura.jpg');
+
+    }
+
+    /* Define a margem superior do corpo da página */
+    body {
+        margin-top: 330px; /* Ajusta conforme necessário */
+    }
+
+    /* Define estilos para a página ao imprimir */
+    @page {
+        /* Quebra de página antes de cada tabela */
+        page-break-before: always;
+
+        /* Define uma imagem de fundo para cada página */
+        background-image: url('/img/decalquesDetranCerto.jpg');
+        background-size: contain; /* Ajusta conforme necessário */
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5; /* Opcional: ajusta a opacidade para melhorar a legibilidade do conteúdo */
+        height: 100%;
+    }
+
+    /* Define estilos para as tabelas */
+    table {
+        /* Permite que a tabela seja dividida entre páginas */
+        page-break-inside: auto;
+        width: 800px; /* Ajusta a largura conforme necessário */
+    }
+
+    /* Define estilos para as linhas da tabela */
+    tr {
+        /* Evita que as linhas sejam divididas entre páginas */
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    .space {
+        padding: 300px;
+        background-color: aqua;
+        
+    
+    }
+
+    /* Define estilos para o cabeçalho da tabela */
+    thead {
+        display: table-header-group;
+    }
+
+    /* Define estilos para o rodapé da tabela */
+    tfoot {
+        display: table-footer-group;
+    }
+
+    /* Define estilos para o corpo da tabela */
+    tbody {
+        display: table-row-group;
+    }
+
+    /* Define quebra de página antes de cada linha com a classe "page-break" */
+    tr.page-break {
+        page-break-before: always;
+    }
+}
